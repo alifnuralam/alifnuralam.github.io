@@ -1,3 +1,9 @@
 .jumbotron {
-  padding-top: 6rem;
+  background-position: 0;
+  margin-top: 50px;
+  height: 550px;
+}
+
+.about {
+  background-color: aqua;
 }
