@@ -29,19 +29,20 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
           <a class="nav-link active" href="#">Home</a>
-          <a class="nav-link" href="#">Features</a>
-          <a class="nav-link" href="#">Pricing</a>
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#projects">Project</a>
+          <a class="nav-link" href="#contact">Contact</a>
+
         </div>
       </div>
     </div>
   </nav>
   <!-- navbar  end-->
 
-  <!-- jumbotron -->
-  <div class=" jumbotron my-5 text-center border-bottom">
+  <!-- jumbotrom-->
+  <div class="my-5 text-center border-bottom pt-5">
     <div class="container px-5">
-      <img src="/img/shiba.jpeg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="200"
+      <img src="/img/alip ndah.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="200"
         height="100" loading="lazy">
     </div>
     <h1 class="display-4 fw-bold">Alif Nur Alam</h1>
@@ -77,8 +78,9 @@
       </div>
     </div>
   </div>
+  <!-- jumbotron end -->
   <!-- features -->
-  <div class="container px-4 py-5" id="hanging-icons">
+  <div id="about" class="container px-4 py-5" id="hanging-icons">
     <h2 class="text-center mb-5 ">About Me</h2>
 
     <div class="row text-center justify-content-center row-cols-1 row-cols-lg-3 center">
@@ -91,9 +93,8 @@
         </div>
         <div>
           <h3 class="fs-2 text-body-emphasis">About Me</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and
-            probably just keep going until we run out of words.</p>
-          <a href="#" class="btn btn-primary">
+          <p>I am a grade 1 student from SMK Budi Bhakti Mandirancan, I come from Mandirancan Village</p>
+          <a href="/tidakditemukan.html" class="btn btn-primary">
             Primary button
           </a>
         </div>
@@ -119,7 +120,6 @@
   </div>
   </div>
   <!-- features end -->
-  <!-- jumbotron end -->
   <!-- card -->
   <section id="projects">
     <div class="container">
@@ -131,17 +131,17 @@
       <div class="row">
         <div class="col-md-4 mb-3 ">
           <div class="card">
-            <img src="/img/kelinci.jpeg" class="card-img-top" alt="kelinci">
+            <img src="/img/berkebun.jpg" class="card-img-top" alt="kelinci">
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
+              <p class="card-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, reiciendis?
+
               </p>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-3">
           <div class="card">
-            <img src="/img/kelinci.jpeg" class="card-img-top" alt="kelinci">
+            <img src="/img/malik.jpg" class="card-img-top" alt="kelinci">
             <div class="card-body">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                 content.
@@ -173,22 +173,49 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-6">
-          <form>
+          <!-- Button trigger modal -->
+
+
+          <!-- Modal -->
+          <div class="modal fade modal-alert " id="alert-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="alert-modal">Info</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <strong>Terimakasih!!,</strong> Pesan Kamu Sudah Terkirim
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup Aja</button>
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Yaudah</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form name="alip-contact-form">
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="Nama Lengkap">Nama Lengkap</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="name" class="Nama Lengkap">Nama Lengkap</label>
+              <input type="text" class="form-control" id="name" aria-describedby="nama" name="nama">
             </div>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="Nama Lengkap">Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="email" name="email">
             </div>
 
 
             <div class="mb-3">
               <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="pesan"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary btn-kirim" data-bs-toggle="modal"
+              data-bs-target="#alert-modal">Kirim</button>
+            <button class="btn btn-primary btn-loading d-none" type="button " disabled>
+              <span class="spinner-border spinner-border-sm " aria-hidden="true"></span>
+              <span role="status">Loading...</span>
+            </button>
           </form>
         </div>
       </div>
@@ -210,7 +237,7 @@
         <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
         <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
       </ul>
-      <p class="text-center text-body-secondary"> © 2024 Made With Love,By <a class="text-black fw-bold"
+      <p class="text-center text-body-secondary "> © 2024 Made With Love,By <a class="text-black fw-bold"
           href="https://www.instagram.com/suralipp/">Alif Nur Alam</a></p>
     </footer>
   </div>
@@ -218,6 +245,33 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwQFj0KovGHRuuJfAQHMgkjHSWvG-wiu5EI0n2G5C9OmT0f1m5K_uEbn6IcfcCCIrqmZA/exec'
+    const form = document.forms['alip-contact-form']
+    const btnKirim = document.querySelector('.btn-kirim');
+    const btnLoading = document.querySelector('.btn-loading');
+    const myAlert = document.querySelector('.modal-alert');
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      // keetika tombol di submit
+
+      btnLoading.classList.toggle('d-none');
+      btnKirim.classList.toggle('d-none');
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+
+        .then(response => {
+          // tampilkan tombol loading, hilangkan tombol kiri
+          btnLoading.classList.toggle('d-none');
+          btnKirim.classList.toggle('d-none');
+
+
+          console.log('Success!', response)
+
+
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 
 </html>
